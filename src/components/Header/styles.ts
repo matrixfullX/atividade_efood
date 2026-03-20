@@ -1,14 +1,17 @@
 import styled from "styled-components"
 
 export const Logo = styled.img`
+  display: block;
+  margin: 0 auto;
   position: absolute;
-  left: 45%;
-  top: 60px;
+  top: 50px;
 `
 
 export const Container = styled.div`
-  background-image: url("../../../assets/images/fundo.png");
-  max-width: 1366px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-image: url("../../../assets/images/elements/fundo.png");
   width: 100%;
   height: 300px;
 `
