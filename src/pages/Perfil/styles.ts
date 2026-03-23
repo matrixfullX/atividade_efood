@@ -23,7 +23,7 @@ export const Presentation = styled.img`
   height: 300px;
 `
 
-type BackgroundProps = {
+export type BackgroundProps = {
   primary: boolean
 }
 

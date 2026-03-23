@@ -15,7 +15,6 @@ const rotas = createBrowserRouter([
 ])
 
 function App() {
-
   return (
     <>
       <GlobalStyle />
