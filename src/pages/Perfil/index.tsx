@@ -73,7 +73,7 @@ const Perfil = () => {
         </ContainerItensFlavors>
       </ContainerFlavors>
       <Footer />
-      {isOpen && <Modal onClose={() => setIsOpen(true)} />}
+      {isOpen ? <Modal onClose={() => setIsOpen(false)} /> : undefined}
     </>
   )
 }

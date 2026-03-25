@@ -1,24 +1,30 @@
+import { useState } from "react"
 import sabor1 from "../../../assets/images/presentation/sabor1.png"
 import { Infos } from "../../components/Foods/styles"
 import { CardModal, ImageModal, ButtonModalBuy, Overlay, TitleModal, ParagraphModal, ButtonClose } from "./styles"
+import Carrinho from "../Carrinho"
 
 type Props = {
   onClose: () => void
 }
 
-const Modal = ({ onClose }: Props) => (
-  <Overlay>
-    <CardModal primary={false}>
-    <ImageModal src={sabor1} alt="pizza marguerida" />
-    <Infos>
-      <TitleModal>Pizza Marguerita</TitleModal>
-      <ParagraphModal>A pizza Margherita é uma pizza clássica da culinária italiana, reconhecida por sua simplicidade e sabor inigualável. Ela é feita com uma base de massa fina e crocante, coberta com molho de tomate fresco, queijo mussarela de alta qualidade, manjericão fresco e azeite de oliva extra-virgem. A combinação de sabores é perfeita, com o molho de tomate suculento e ligeiramente ácido, o queijo derretido e cremoso e as folhas de manjericão frescas, que adicionam um toque de sabor herbáceo. É uma pizza simples, mas deliciosa, que agrada a todos os paladares e é uma ótima opção para qualquer ocasião</ParagraphModal>
-      <ParagraphModal>Serve: de 2 a 3 pessoas</ParagraphModal>
-      <ButtonModalBuy primary={false}>Adicionar ao Carrinho - R$ 60,90</ButtonModalBuy>
-      <ButtonClose primary={false} onClick={onClose}>Fechar</ButtonClose>
-    </Infos>
-  </CardModal>
-  </Overlay>
-)
+const Modal = ({ onClose }: Props) => {
+  const [isOpen, setIsOpen] = useState(false)
 
+  return (
+    <Overlay>
+      <CardModal primary={false}>
+        <ImageModal src={sabor1} alt="pizza marguerida" />
+        <Infos>
+          <TitleModal>Pizza Marguerita</TitleModal>
+          <ParagraphModal>A pizza Margherita é uma pizza clássica da culinária italiana, reconhecida por sua simplicidade e sabor inigualável. Ela é feita com uma base de massa fina e crocante, coberta com molho de tomate fresco, queijo mussarela de alta qualidade, manjericão fresco e azeite de oliva extra-virgem. A combinação de sabores é perfeita, com o molho de tomate suculento e ligeiramente ácido, o queijo derretido e cremoso e as folhas de manjericão frescas, que adicionam um toque de sabor herbáceo. É uma pizza simples, mas deliciosa, que agrada a todos os paladares e é uma ótima opção para qualquer ocasião</ParagraphModal>
+          <ParagraphModal>Serve: de 2 a 3 pessoas</ParagraphModal>
+          <ButtonModalBuy onClick={() => setIsOpen(true)} primary={false}>Adicionar ao Carrinho - R$ 60,90</ButtonModalBuy>
+          <ButtonClose primary={false} onClick={onClose}>Fechar</ButtonClose>
+        </Infos>
+      </CardModal>
+      {isOpen ? <Carrinho onClose={() => setIsOpen(false)} /> : undefined}
+    </Overlay>
+  )
+}
 export default Modal
