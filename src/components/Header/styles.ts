@@ -4,7 +4,7 @@ export const Logo = styled.img`
   display: block;
   margin: 0 auto;
   position: absolute;
-  top: 50px;
+  top: 35px;
 `
 
 export const Fundo = styled.img`
@@ -27,12 +27,12 @@ export const Info = styled.h3`
   justify-content: center;
   position: absolute;
 
-  max-width: 460px;
+  max-width: 700px;
   width: 100%;
 
   text-align: center;
-  padding-top: 220px;
+  padding-top: 175px;
   color: #E66767;
   font-weight: 900;
-  font-size: 24px;
+  font-size: 36px;
 `

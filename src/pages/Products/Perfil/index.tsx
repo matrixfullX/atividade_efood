@@ -5,7 +5,7 @@ import fundo from "../../../assets/images/elements/fundo.png"
 import Footer from "../../../components/Footer"
 import Modal from "../../Order/Modal"
 import { Container, Fundo, Logo } from "../../../components/Header/styles"
-import { ContainerFlavors, ContainerInfos, ContainerItensFlavors, Info, Presentation, CardFlavors, ParagraphFlavors, TitleFlavors, ButtonFlavors } from "./styles"
+import { ContainerFlavors, ContainerInfos, ContainerItensFlavors, Info, Presentation, CardFlavors, ParagraphFlavors, TitleFlavors, ButtonFlavors, Flavor, TitleHeader } from "./styles"
 import { Image, Infos } from "../../../components/Foods/styles"
 import { useState } from "react"
 
@@ -20,7 +20,11 @@ const Perfil = () => {
           <Info>Restaurantes</Info>
           <Info>0 produto(s) no carrinho</Info>
         </ContainerInfos>
-          <Presentation src={apresentacao} alt="imagem representatica do prato" />
+          <Presentation>
+            <img src={apresentacao} alt="imagem de fundo macarrao" />
+            <Flavor>Italiana</Flavor>
+            <TitleHeader>La Dolce Vita Trattoria</TitleHeader>
+          </Presentation>
       </Container>
       <ContainerFlavors>
         <ContainerItensFlavors>

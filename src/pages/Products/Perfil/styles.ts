@@ -17,11 +17,35 @@ export const Info = styled.p`
   color: #E66767;
 `
 
-export const Presentation = styled.img`
+export const Presentation = styled.div`
   position: absolute;
-  top: 180px;
   width: 100%;
   height: 300px;
+  margin-top: 160px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+`
+
+export const Flavor = styled.h2`
+  position: absolute;
+  top: 20px;
+  left: 220px;
+  color: #fff;
+  font-size: 32px;  
+  font-weight: 100;
+`
+
+export const TitleHeader = styled.h2`
+  font-size: 32px;
+  font-weight: 900;
+  position: absolute;
+  bottom: 20px;
+  left: 220px;
+  color: #fff;
 `
 
 export type BackgroundProps = {
